@@ -1,0 +1,428 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<!--STYLE REFERENCES -->	
+    	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    	<title>Grupo SAC</title>
+		<link rel="stylesheet" href="css/960.css" type="text/css" media="screen" charset="utf-8" />
+		<link rel="stylesheet" href="css/template.css" type="text/css" media="screen" charset="utf-8" />
+		<link rel="stylesheet" href="css/colour.css" type="text/css" media="screen" charset="utf-8" />
+		<link href="js/glow/1.7.0/widgets/widgets.css" type="text/css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/jquery.ui.theme.css">
+		<link rel="stylesheet" href="css/jquery-ui.min.css">
+		<link rel="stylesheet" href="css/jquery.signature.css">
+		<!--[if IE]><![if gte IE 6]><![endif]-->
+		<!--SCRIPT REFERENCES -->	
+		<script src="js/glow/1.7.0/core/core.js" type="text/javascript"></script>
+		<script src="js/glow/1.7.0/widgets/widgets.js" type="text/javascript"></script>
+		<script src="js/jquery-1.10.1.min.js"></script>
+		<script src="js/jquery-ui.js"></script>
+		<script src="js/jquery.ui.touch-punch.min.js"></script>
+		<script src="js/jquery.ui.core.js"></script>
+		<script src="js/jquery.ui.widget.js"></script>
+		<script src="js/jquery.ui.mouse.js"></script>
+		<script src="js/jquery.ui.button.js"></script>
+		<script src="js/jquery.ui.draggable.js"></script>
+		<script src="js/jquery.ui.position.js"></script>
+		<script src="js/jquery.ui.resizable.js"></script>
+		<script src="js/jquery.ui.button.js"></script>
+		<script src="js/jquery.ui.dialog.js"></script>
+		<script src="js/jquery.ui.effect.js"></script>
+		<script src="js/jquery.signature.min.js"></script>
+
+		<script type="text/javascript">
+			glow.ready(function(){
+				new glow.widgets.Sortable(
+					'#content .grid_5, #content .grid_6',
+					{
+						draggableOptions : {
+							handle : 'h2'
+						}
+					}
+				);
+			});
+		</script>
+		<!--[if IE]><![endif]><![endif]-->
+	</head>
+	<body>
+<!--   HEADER   -->
+		<h1 id="head">
+			<div class="logo">
+				<img  alt="Grupo Sac" src="img/grupo-sac-logo.png" border="0"/>
+			</div>
+			<span class="slogan">Portal de servicios</span>
+		</h1>
+		
+		<ul id="navigation">
+			<li><a href="ticketsInternos.html">Inicio</a></li>
+			<li><a href="tickets_cooadm.html">Tickets</a></li>
+			<li><a href="ordenesServicio_coo.html">Ordenes Serv.</a></li>
+			<li><span  class="active">Tickets Internos</span></li>
+			<li><a href="encuestas.html">Encuestas  Serv.</a></li>
+			<li><a href="indicadores.html">Indicadores Serv.</a></li>
+			<li><span style="width:15px;"></span></li>
+			<li><input type="text"/></li>
+			<li><small>&nbsp;</small></li>
+			<li><input type="submit" value="Buscar" class="searchButton" onclick="window.location = 'resultadoBusqueda.html'"/></li>
+		</ul>
+<!--   ~ HEADER   -->
+<script type="text/javascript">
+Date.prototype.format = function(format) //author: meizz
+{
+  var o = {
+    "M+" : this.getMonth()+1, //month
+    "d+" : this.getDate(),    //day
+    "h+" : this.getHours(),   //hour
+    "m+" : this.getMinutes(), //minute
+    "s+" : this.getSeconds(), //second
+    "q+" : Math.floor((this.getMonth()+3)/3),  //quarter
+    "S" : this.getMilliseconds() //millisecond
+  }
+
+  if(/(y+)/.test(format)) format=format.replace(RegExp.$1,
+    (this.getFullYear()+"").substr(4 - RegExp.$1.length));
+  for(var k in o)if(new RegExp("("+ k +")").test(format))
+    format = format.replace(RegExp.$1,
+      RegExp.$1.length==1 ? o[k] :
+        ("00"+ o[k]).substr((""+ o[k]).length));
+  return format;
+}
+
+function fillText(fld)
+{
+	var text = [" Se acudio al levantamiento, la persona que acudio a la cita fue el Ing. Jose luis Esteva  pero aun no ha proporcionado la informacion a Carlos Hernandez para que el le de respuesta al cliente, el Ing ahora se encuenta en Nayarit y se hablara con el el lunes "];
+	
+	return text[fld];
+}
+
+</script>
+<!--   CONTENT   -->
+			<div id="content" class="container_16 clearfix">
+			
+<!--   CONTENT COLUMN   -->		
+				<div class="grid_15">	
+					<p>Raul: Mesa de ayuda</p>
+				</div>		
+				<div class="grid_15">					
+					<div class="box">
+						<h2>Ticket interno</h2>
+						<div class="utils">
+					
+						</div>
+						<table>
+							<tr>
+								<td>Folio:</td>
+								<td colspan="3" style="width:200px;"><input type="text" id="fldFolio" style="width:95%;" readOnly="true" value="SAC45"/></td>
+								<td>Marca temporal:</td>
+								<td><input type="text" id="fldFolio" style="width:95%;" readOnly="true" value="1/04/2013 9:14:12"/></td>
+							</tr>
+							<tr>
+								<td>Usuario</td>
+								<td colspan="3"><input type="text" style="width:95%;" readOnly="true" value="juanjose.espinoza@gposac.com.mx"/></td>
+								<td>Solicitante</td>
+								<td><input type="text" style="width:95%;" readOnly="true" value="Ventas"/></td>
+							</tr>
+							<tr>
+								<td>Tipo</td>
+								<td colspan="3"><input type="text" style="width:95%;" readOnly="true" value="Realización de Cedula de Costos"/></td>
+								<td>Fecha Limite</td>
+								<td><input id="myDate" type="text" style="width:95%;" readOnly="true" value="3/04/2013"/></td>
+							</tr>
+							<tr>
+								<td>Descripcion de la solicitud</td>
+								<td colspan="6">										
+									<textarea id="fldSitEnc" style="width:100%;height:100%;" rows="15">Me pueden apoyar con el suiguiente requerimiento para INEGI por favor.
+ para INEGI por favor.
+
+
+Batería para UPS Sellada libre de mantenimiento, Marcas DYNASTY, Modelo UPS12-350MR; marca SPRINTER ó equivalente en calidad, voltaje 12 VCD, capacidad 93 a.h., terminal insertada en el cuerpo de la batería, con 1.67 VPC, a 15 min 350 a.h., de plomo-acido con electrolito suspendido, con las siguientes dimensiones: 20.48 cm (8.06 pulgadas) de alto, 30.58 cm (12.04 pulgadas) de largo y 16.89 cm (6.65 pulgadas) de ancho. Las baterías deberán incluir: rondana y tornillo de acero inoxidable cabeza hexagonal para conexión de batería, 164 links para interconexión de baterías fabricados de cables de cobre porta electrodo calibre 2/0, 90°C, 600 Volts, 1330 hilos con zapatas de cobre bañada de estaño con ojillo de 1/4 de pulgada para conexión a baterías. Los links para interconexión deben de ser con las siguientes cantidades y medidas: 32 piezas de 21 cm, 96 piezas de 31 cm, 16 piezas de 60 cm, 12 piezas de 150 cm, 4 piezas de 250 cm y 4 de 50 cm.
+
+TOTAL DE BATERIAS 160
+
+CONSIDERAR INSTALACIÓN POR SEPARADO.
+
+ESTAS SON LAS CONDICIONES QUE TENEMOS QUE CUMPLIR CON LAS BATERIAS: 
+Tiempo de entrega no mayor a 35 dias naturales
+Entrega en Aguascalientes
+Garantia por 2 años
+Cumplir con la NOM-001-SEDE-2005.- “Instalaciones Eléctricas”,  y estándares internacionales como la UL 1778.-“Sistemas de alimentación ininterrumpida”</textarea>
+								</td>
+							</tr>
+							<tr>
+								<td>Proyecto</td>
+								<td colspan="3"><input type="text" style="width:95%;" readOnly="true" value="CM150"/></td>
+								<td>Oficina</td>
+								<td><input type="text" style="width:95%;" readOnly="true" value="GDL"/></td>
+								<!-- <td></td> -->
+							</tr>
+							<tr>
+								<td>Persona asignada</td>
+								<td colspan="7"><input type="text" style="width:95%;" readOnly="true" value="Jorge Chavez"/></td>
+							</tr>
+							<tr>
+								<td>Fecha y hora de respuesa</td>
+								<td colspan="3"><input type="text" style="width:95%;" readOnly="true" value="2/04/2013 14:05:00"/></td>
+							</tr>		
+							<tr>
+								<td>Entrega a tiempo?</td>
+								<td><input type="checkbox" style="width:95%;" readOnly="true"/></td>
+							</tr>		
+							<tr>
+								<td>Calificacion interna</td>
+								<td colspan="5"><input type="text" style="width:95%;" readOnly="true" value="10"/></td>
+							</tr>
+							<tr>
+								<td>Tiempo respuesta hr</td>
+								<td colspan="3"><input type="text" style="width:95%;" readOnly="true" value="2"/></td>
+								<td>Desv. fecha solicitada</td>
+								<td><input type="text" style="width:95%;" readOnly="true" value="4"/></td>
+								<!-- <td></td> -->
+							</tr>
+							<tr>
+								<td>Estatus</td>
+								<td colspan="5"><input type="text" style="width:95%;" readOnly="true" value="ABIERTO"/></td>
+							</tr>
+
+						</table>
+					</div>					
+				</div>
+				
+<!--   ~ CONTENT COLUMN   -->
+
+<!--   CONTENT COLUMN   -->				
+				<script type="text/javascript">
+					$(document).ready(function () {
+						var attCounter = 0;
+						
+						//Attachment dialog
+						$("#attachmentDlg").dialog({
+							autoOpen: false,
+							height: 270,
+							width: 420,
+							modal: true,
+							buttons: {
+								"Aceptar": function() {
+									$( this ).dialog( "close" );
+									var af = $("#folioAttached").val();
+									$("#fldFolio").val(af);
+								},
+								
+								"Cancelar": function() {
+								$( this ).dialog( "close" );
+							}}
+						});
+						
+						//Save confirm dialog
+						$("#saveConfirm").dialog({
+							autoOpen: false,
+							height: 250,
+							width: 380,
+							modal: true,
+							buttons: {
+								"Aceptar": function() {
+									$( this ).dialog( "close" );
+									window.location = 'dashboard.html';
+								},
+								
+								"Cancelar": function() {
+								$( this ).dialog( "close" );
+							}}
+						});
+						
+						//History dialog
+						$("#historyDlg").dialog({
+							autoOpen: false,
+							height: 380,
+							width: 500,
+							modal: true,
+							buttons: {
+								"Cerrar": function() {
+									$( this ).dialog( "close" );
+							}}
+						});
+						
+						//Attachment Img dialog
+						$("#attachmentImgDlg").dialog({
+							autoOpen: false,
+							height: 340,
+							width: 420,
+							modal: true,
+							buttons: {
+								"Aceptar": function() {
+									$( this ).dialog( "close" );
+									attCounter++;
+									$('#img'+attCounter+'PH').html("<img src='img/bigPdf.png' alt='' />");
+									$('#img'+attCounter+'Desc').html($("#attachment option:selected").val());
+								},
+								
+								"Cancelar": function() {
+								$( this ).dialog( "close" );
+							}}
+						});
+						
+						// Seguimiento$("#seguimientoCapture").hide();
+						$("#seguimientoCapture").hide();
+					});
+					
+					function addSeguimiento(){
+						var d = new Date(); 
+						$("#seguimientoCapture").show();	
+						$("#seguimientoStamp").html(d.format('dd/MM/yyyy h:mm:ss') + ' Raul:');
+						$("#seguimientoText").val('');
+					}
+					
+					function applySeguimiento(){
+						var template = '<div class="comment"><p><strong>TIMESTAMP: Raul: WHO</strong></p><p><small>MYCOMMENT</small></p></div>';
+						var d = new Date(); 
+						var content = template.replace('TIMESTAMP', d.format('dd/MM/yyyy h:mm:ss'));
+						content = content.replace('MYCOMMENT', $("#seguimientoText").val());
+						content = content.replace('WHO', $("#who option:selected").val());
+						var currSegContent = $("#seguimientoContent").html();
+						currSegContent = currSegContent + content;
+						$("#seguimientoContent").html(currSegContent);
+						$("#seguimientoCapture").hide();
+					}
+					
+					function cancelAddSeguimiento(){
+						$("#seguimientoCapture").hide();
+					}
+					
+					function fillSeguimiento(){
+						$("#seguimientoText").val('Se conocen los precios de los fletes y el precio unitario de unas de las baterias esprando el precio que falta. Ya fue enviado via correo el precio que faltaba.');
+					}
+				</script>
+				<div class="grid_15">
+					<div class="box">
+						<h2>Seguimiento</h2>
+							<table id="seguimientoTable">
+								<thead>
+									<th>Seguimiento</th>
+								</thead>
+									<tr>
+										<td id="seguimientoContent">
+										</td>
+									</tr>
+									<tr>
+										<td id="seguimientoCapture" class="comment">
+											<div>
+												<Label id="seguimientoStamp">stamp</Label>
+											</div>
+											<div> Asignar a:
+												<select id="who" style="width:200px;">
+													<option value="Alberto Lopez Gomez">Alberto Lopez Gomez</option>
+													<option value="Alejandra Diaz">Alejandra Diaz</option>
+													<option value="Alejandro Monroy">Alejandro Monroy</option>
+													<option value="Angeles Avila">Angeles Avila</option>
+													<option value="Armando Perez Pinto">Armando Perez Pinto</option>
+													<option value="Gonzalo Ramirez">Gonzalo Ramirez</option>
+													<option value="Jose Alberto Jonguitud Gallardo">Jose Alberto Jonguitud Gallardo</option>
+													<option value="Marlem Samano">Marlem Samano</option>
+													<option value="Martin Vazquez">Martin Vazquez</option>
+													<option value="Reynaldo Garcia">Reynaldo Garcia</option>
+													<option value="Sergio  Gallegos">Sergio  Gallegos</option>
+												</select>
+												<p></p>
+												<textarea id="seguimientoText" rows="5" style="width:65%;" onclick="fillSeguimiento();"></textarea>
+												<button class="searchButton" onclick="applySeguimiento();">Agregar</button>
+												<button class="searchButton" onclick="cancelAddSeguimiento();">Cancelar</button>
+											</div>
+										</td>
+									</tr>
+							</table>
+							<table>
+								<tbody>
+									<tr>
+										<td>
+											<button class="searchButton" onclick="addSeguimiento();">Agregar seguimiento</button>
+										</td>
+									</tr>
+								<tbody>
+							</table>
+							<table id="attachments">
+								<thead>
+									<tr>
+										<th colspan="3">Archivos Adjuntos</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td id="img1PH" style="width:150px;"></td>
+										<td id="img2PH" style="width:150px;"></td>
+										<td id="img3PH" style="width:150px;"></td>
+									</tr>
+									<tr>
+										<td id="img1Desc"></td>
+										<td id="img2Desc"></td>
+										<td id="img3Desc"></td>
+									</tr>
+									<tr>
+										<td colspan="2"><button class="searchButton" onclick="$('#attachmentImgDlg').dialog('open');">Adjuntar Archivo</button></td>
+									</tr>
+								</tbody>
+							</table>
+							<table>
+								<tbody>
+									<tr>
+										<td>
+											<button class="searchButton" onclick="$('#saveConfirm').dialog('open');">Resolver Ticket</button>
+										</td>
+									</tr>
+								<tbody>
+							</table>
+					</div>					
+				</div>				
+<!--   ~ CONTENT COLUMN   -->
+				
+				<!-- Attachment section -->
+				<div id="attachmentDlg" title="Importar orden de servicio">
+					<p>Número de Folio: <input type="text" id="folioAttached"/></p>
+					<p></p>
+					<p>Seleccione el archivo que desea adjuntar</p>
+					<input type="file" name="somename" size="80"/> 
+					<p></p>
+					<p>Seleccione la entrada que corresponde al archivo</p>
+					<select name="entrada" id="entrada">
+						<option value="">Cedula de costos</option>
+						<option value="">Cedula de proyectos</option>
+						<option value="">CheckList de levantamiento</option>
+						<option value="">Floor Map</option>
+						<option value="">Hoja de visita</option>
+					</select>
+				</div>
+				
+				<!-- Attachment Img section -->
+				<div id="attachmentImgDlg" title="Adjuntar archivo">
+					<p></p>
+					<p>Seleccione el archivo que desea adjuntar</p>
+					<input type="file" name="somename" size="80"/> 
+					<p>Seleccione la entrada que corresponde al archivo</p>
+					<select name="attachment" id="attachment">
+						<option value="Cedula de costos">Cedula de costos</option>
+						<option value="Cedula de proyectos">Cedula de proyectos</option>
+						<option value="CheckList de levantamiento">CheckList de levantamiento</option>
+						<option value="Encuesta de satisfaccion">Encuesta de satisfaccion</option>
+						<option value="Floor Map">Floor Map</option>
+						<option value="Hoja de visita">Hoja de visita</option>
+						<option value="Imagenes 3D del site">Imagenes 3D del site</option>
+						<option value="Validacion de proyecto">Validacion de proyecto</option>
+						<option value="Propuesta de unifilar">Propuesta de unifilar</option>
+					</select>
+
+				</div>
+				
+				<div id="saveConfirm" title="Cerrar Ticket SAC45">
+					<p>¿Confirma que desea cerrar las acciones pendientes en el ticket SAC45?</p>
+					<p>El ticket será asignado al personal de mesa de ayuda para su revision</p>
+				</div>
+				
+<!--   ~ CONTENT   -->
+			</div>
+			
+<!--   FOOTER   -->			
+		<div id="foot">
+			<a href="#">Soporte</a>
+		</div>
+<!--   ~ FOOTER   -->
+	</body>
+</html>
